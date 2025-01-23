@@ -4,4 +4,4 @@ DB_PASSWORD="P@ssw0rd"
 mysqldump -u $DB_USER -p$DB_PASSWORD --database ShopDB --no-create-db --result-file=backup-no-create-db.sql
 mysql -u $DB_USER -p$DB_PASSWORD ShopDBReserve < backup-no-create-db.sql
 mysqldump -u $DB_USER -p$DB_PASSWORD --database ShopDB --result-file=backup.sql
-mysql -u $DB_USER -p$DB_PASSWORD ShopDBReserve < backup.sql
+mysql -u $DB_USER -p$DB_PASSWORD ShopDBDevelopment < backup.sql
