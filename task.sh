@@ -1,6 +1,7 @@
 #! /bin/bash
+
 DB_USER="mysqluser"
-DB_PASSWORD="P@ssw0rd"
+DB_PASSWORD="YES"
 
 mysqldump -u $DB_USER -p$DB_PASSWORD --databases ShopDB --result-file=backup-no-create-db.sql && \
 mysql -u $DB_USER -p$DB_PASSWORD ShopDBReserve < backup-no-create-db.sql
